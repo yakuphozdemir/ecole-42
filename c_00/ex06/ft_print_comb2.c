@@ -6,12 +6,12 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 16:57:57 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/07/25 20:48:34 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/01 12:19:44 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-
+#include <stdio.h>
 void	write_char(char	c)
 {
 	write(1, &c, 1);

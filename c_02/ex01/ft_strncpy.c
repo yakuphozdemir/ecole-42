@@ -1,46 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strncpy.c                                       :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/27 10:50:30 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/01 12:21:12 by yozdemir         ###   ########.fr       */
+/*   Created: 2022/08/02 16:09:57 by yozdemir          #+#    #+#             */
+/*   Updated: 2022/08/02 16:51:33 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+char	*ft_strncpy(char *dest, char *src, unsigned int n)
 {
-	write(1, &c, 1);
-}
+	unsigned int	i;
 
-void	num_op(int n)
-{
-	if (n > 9)
-		num_op(n / 10);
-	ft_putchar((n % 10) + 48);
-}
-
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	i = 0;
+	while (src[i] != '\0' && i < n)
 	{
-		write (1, "-2147483648", 11);
-		return ;
+		dest[i] = src[i];
+		i++;
 	}
-	if (nb < 0)
-	{
-		nb *= -1;
-		write(1, "-", 1);
-	}
-	num_op(nb);
-	write(1, "\n", 1);
+	if (i < n)
+		dest[i] = '\0';
+	return (dest);
 }
 
-int	main(void)
+int	main()
 {
-	ft_putnbr(-558);
+	char	desti[] = "sozcukler";
+	char	srci[] = "ke";
+	char	*dest;
+
+	dest = ft_strncpy(desti, srci, 3);
+	printf("%s\n", dest);
 }

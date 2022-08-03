@@ -1,46 +1,35 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_str_is_alpha.c                                  :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/27 10:50:30 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/01 12:21:12 by yozdemir         ###   ########.fr       */
+/*   Created: 2022/08/02 16:57:28 by yozdemir          #+#    #+#             */
+/*   Updated: 2022/08/03 13:27:21 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+int	ft_str_is_alpha(char *str)
 {
-	write(1, &c, 1);
-}
-
-void	num_op(int n)
-{
-	if (n > 9)
-		num_op(n / 10);
-	ft_putchar((n % 10) + 48);
-}
-
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	int	i;
+	int r;
+	
+	i = 0;
+	while (str[i] != '\0')
 	{
-		write (1, "-2147483648", 11);
-		return ;
+		if (str[i] < 65 || (str[i] > 90 && str[i] < 97) || str[i] > 122)
+			return (0);
+		i++;
 	}
-	if (nb < 0)
-	{
-		nb *= -1;
-		write(1, "-", 1);
-	}
-	num_op(nb);
-	write(1, "\n", 1);
+	return (1);
 }
 
-int	main(void)
+int	main()
 {
-	ft_putnbr(-558);
+	char	word[] = "bizbiz";
+
+	printf ("%d\n", ft_str_is_alpha(word));
 }

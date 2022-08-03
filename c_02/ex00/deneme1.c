@@ -1,46 +1,27 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/27 10:50:30 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/01 12:21:12 by yozdemir         ###   ########.fr       */
+/*   Created: 2022/08/01 14:03:34 by yozdemir          #+#    #+#             */
+/*   Updated: 2022/08/01 14:22:30 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
-
-void	ft_putchar(char c)
+#include <string.h>
+#include <stdio.h>
+int	main()
 {
-	write(1, &c, 1);
-}
+	char	a[] = "sozcuk";
+	char	b[] = "kelime";
 
-void	num_op(int n)
-{
-	if (n > 9)
-		num_op(n / 10);
-	ft_putchar((n % 10) + 48);
-}
-
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	strcpy(a, b);
+	int i = 0;
+	while (i < 6)
 	{
-		write (1, "-2147483648", 11);
-		return ;
+		printf("%c", a[i]);
+		i++;
 	}
-	if (nb < 0)
-	{
-		nb *= -1;
-		write(1, "-", 1);
-	}
-	num_op(nb);
-	write(1, "\n", 1);
-}
-
-int	main(void)
-{
-	ft_putnbr(-558);
 }

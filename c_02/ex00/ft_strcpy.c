@@ -1,46 +1,37 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putnbr.c                                        :+:      :+:    :+:   */
+/*   ft_strcpy.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/27 10:50:30 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/01 12:21:12 by yozdemir         ###   ########.fr       */
+/*   Created: 2022/08/01 14:03:34 by yozdemir          #+#    #+#             */
+/*   Updated: 2022/08/01 18:07:37 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <string.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
+char	*ft_strcpy(char *dest, char *src)
 {
-	write(1, &c, 1);
-}
+	int i;
 
-void	num_op(int n)
-{
-	if (n > 9)
-		num_op(n / 10);
-	ft_putchar((n % 10) + 48);
-}
-
-void	ft_putnbr(int nb)
-{
-	if (nb == -2147483648)
+	i = 0;
+	while (src[i] != '\0')
 	{
-		write (1, "-2147483648", 11);
-		return ;
+		dest[i] = src[i];
+		i++;
 	}
-	if (nb < 0)
-	{
-		nb *= -1;
-		write(1, "-", 1);
-	}
-	num_op(nb);
-	write(1, "\n", 1);
+	return(dest);
 }
 
-int	main(void)
+int	main()
 {
-	ft_putnbr(-558);
+	char	desti[] = "string";
+	char	srci[] = "bizbiz";
+	char	*dest;
+
+	dest = ft_strcpy(desti, srci);
+	printf("%s\n",dest);
 }
