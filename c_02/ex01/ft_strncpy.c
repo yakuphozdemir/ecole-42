@@ -6,7 +6,7 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 16:09:57 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/02 16:51:33 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/15 16:28:00 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -27,12 +27,12 @@ char	*ft_strncpy(char *dest, char *src, unsigned int n)
 	return (dest);
 }
 
-int	main()
+int	main(void)
 {
 	char	desti[] = "sozcukler";
 	char	srci[] = "ke";
 	char	*dest;
 
-	dest = ft_strncpy(desti, srci, 3);
+	dest = ft_strncpy(desti, srci, 2);
 	printf("%s\n", dest);
 }

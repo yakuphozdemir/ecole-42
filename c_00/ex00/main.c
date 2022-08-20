@@ -6,14 +6,16 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/24 23:44:31 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/07/25 13:38:00 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/13 15:38:57 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include "ft_putchar.c"
+
+void	ft_putchar(char c);
 
 int	main(void)
 {
-	ft_putchar('c');
+	ft_putchar('a');
+	write(1, "\n", 1);
 }

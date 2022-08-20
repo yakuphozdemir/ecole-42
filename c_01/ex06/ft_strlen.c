@@ -6,26 +6,26 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 21:17:13 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/07/30 21:22:07 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/14 15:17:02 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-void	ft_strlen(char *str)
+int	ft_strlen(char *str)
 {
 	int	i;
 
 	i = 0;
 	while (!(str[i] == '\0'))
 		i++;
-	printf("%d\n", i);
+	return (i);
 }
 
-int	main()
+int	main(void)
 {
 	char	*str;
 
 	str = "string";
-	ft_strlen(str);
+	printf("%d\n", ft_strlen(str));
 }

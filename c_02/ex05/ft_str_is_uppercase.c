@@ -6,7 +6,7 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 13:48:51 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/03 13:52:04 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/15 16:48:27 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,19 +14,19 @@
 
 int	ft_str_is_uppercase(char *str)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (str[i] != '\0')
 	{
 		if (str[i] < 65 || str[i] > 90)
-			return 0;
+			return (0);
 		i++;
 	}
-	return 1;
+	return (1);
 }
 
-int	main()
+int	main(void)
 {
 	char	str[] = "aBc";
 

@@ -6,7 +6,7 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 02:32:27 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/07/25 14:35:26 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/13 16:36:35 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -43,4 +43,5 @@ void	ft_print_comb(void)
 int	main(void)
 {
 	ft_print_comb();
+	write(1, "\n", 1);
 }

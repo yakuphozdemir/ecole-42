@@ -1,23 +1,18 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   main2.c                                            :+:      :+:    :+:   */
+/*   ft_putnbr_base.c                                   :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 21:08:09 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/07/30 21:12:55 by yozdemir         ###   ########.fr       */
+/*   Created: 2022/08/11 13:35:10 by yozdemir          #+#    #+#             */
+/*   Updated: 2022/08/11 13:37:48 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
-#include <stdio.h>
-void	ft_putstr(char *str);
 
-int	main()
+void	ft_putnbr_base(int nbr, char *base)
 {
-	char	*str;
-
-	str = "string";
-	ft_putstr(str);
+	
 }

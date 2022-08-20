@@ -6,16 +6,16 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 18:01:58 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/03 22:03:20 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/15 17:25:58 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
+unsigned int	ft_strlcpy(char *dest, char *src, unsigned int size)
 {
-	unsigned int index;
-	unsigned int count;
+	unsigned int	index;
+	unsigned int	count;
 
 	index = 0;
 	count = 0;
@@ -33,15 +33,13 @@ unsigned int ft_strlcpy(char *dest, char *src, unsigned int size)
 	return (count);
 }
 
-int	main()
+int	main(void)
 {
 	char	desti[] = "abcdef";
 	char	srci[] = "ghijklm";
-	unsigned int size = 5;
+	unsigned int	size = 5;
 
 	printf("BEFORE\n	src: %s\n	des: %s\n	size: %d\n", srci, desti, size);
-	
 	size = ft_strlcpy(desti, srci, size);
-
-	printf("AFTER\n	src: %s\n	des: %s\n	size: %d\n", desti, srci, size);
+	printf("AFTER\n	src: %s\n	des: %s\n	size: %d\n", srci, desti, size);
 }

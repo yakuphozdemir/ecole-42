@@ -5,30 +5,30 @@
 /*                                                    +:+ +:+         +:+     */
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 21:17:13 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/07/31 21:22:33 by yozdemir         ###   ########.fr       */
+/*   Created: 2022/07/30 19:04:26 by yozdemir          #+#    #+#             */
+/*   Updated: 2022/08/14 15:12:38 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <unistd.h>
 #include <stdio.h>
 
-void	ft_strlen(char *str)
+void	ft_putstr(void)
 {
+	char	*str;
 	int	i;
 
 	i = 0;
-	while (!(*str == '\0'))
+	str = "string";
+	while (!(str[i] == '\0'))
 	{
-		str++;
+		write(1, &str[i], 1);
 		i++;
 	}
-	printf("%d\n", i);
+	printf("\n");
 }
 
-int	main()
+int	main(void)
 {
-	char	*str;
-
-	str = "string";
-	ft_strlen(str);
+	ft_putstr();
 }

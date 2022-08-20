@@ -6,15 +6,15 @@
 /*   By: yozdemir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 15:15:26 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/04 15:17:31 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/19 21:17:36 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-char *ft_strncat(char *dest, char *src, unsigned int nb);
+char	*ft_strncat(char *dest, char *src, unsigned int nb);
 
-int	main()
+int	main(void)
 {
 	char	dest[] = "append";
 	char	src[] = "ustune ependler";

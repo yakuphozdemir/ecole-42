@@ -6,11 +6,11 @@
 /*   By: yozdemir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 14:19:51 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/04 15:04:40 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/19 21:14:53 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-char *ft_strcat(char *dest, char *src)
+char	*ft_strcat(char *dest, char *src)
 {
 	int	i1;
 	int	i2;

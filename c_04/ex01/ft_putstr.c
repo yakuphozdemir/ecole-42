@@ -1,39 +1,33 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr3.c                                       :+:      :+:    :+:   */
+/*   ft_putstr.c                                        :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 21:13:44 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/07/30 21:16:34 by yozdemir         ###   ########.fr       */
+/*   Created: 2022/08/09 08:04:33 by yozdemir          #+#    #+#             */
+/*   Updated: 2022/08/09 08:09:39 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 
-void	ft_putchar(char c)
+void	ft_putstr(char *str)
 {
-	write(1, &c, 1);
-}
-
-void	ft_putstr()
-{
-	char	*str;
 	int	i;
 
-	str = "string";
 	i = 0;
-
-	while ()
+	while (str[i] != '\0')
 	{
-		if (!(str[i] == '\0'))
-			ft_putchar(str[i]);
+		write(1, &str[i], 1);
 		i++;
 	}
+	write(1, "\n", 1);
 }
 
-int	main()
+int	main(void)
 {
-	ft_putstr();
+	char	str[] = "string";
+
+	ft_putstr(str);
 }

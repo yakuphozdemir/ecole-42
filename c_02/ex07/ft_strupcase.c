@@ -6,7 +6,7 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:49:35 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/03 15:57:26 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/15 17:04:16 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -20,13 +20,13 @@ char	*ft_strupcase(char *str)
 	while (str[i] != '\0')
 	{
 		if (str[i] >= 97 && str[i] <= 122)
-			str[i] = str[i] - (97-65);
+			str[i] = str[i] - 32;
 		i++;
 	}
-	return str;
+	return (str);
 }
 
-int	main()
+int	main(void)
 {
 	char	str[] = "sTriNg";
 

@@ -6,7 +6,7 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 16:02:38 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/03 18:04:36 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/15 17:15:41 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -18,7 +18,7 @@ char	*ft_strcapitalize(char *str)
 	int	j;
 
 	i = 0;
-	j = 0;
+	j = 0;		//kontrol elemani		"0 > kelime basi"				"1 > kelime ortasi"
 	while (str[i] != '\0')
 	{
 		if (j == 0 && str[i] >= 97 && str[i] <= 122)	// büyütme
@@ -26,11 +26,12 @@ char	*ft_strcapitalize(char *str)
 			str[i] = str[i] - 32;
 			j = 1;
 		}
-		else if(j == 1 && (str[i] >= 65 && str[i] <= 90))	// küçültme
+		else if (j == 1 && (str[i] >= 65 && str[i] <= 90))	// küçültme
 		{
-			str[i] = str[i] + 32;
+			str[i] += 32;
 		}
-		else if (str[i] < 48 || (str[i] > 57 && str[i] < 65) || (str[i] > 90 && str[i] < 97) || str[i] > 122)
+		else if (str[i] < 48 || (str[i] > 57 && str[i] < 65)
+			|| (str[i] > 90 && str[i] < 97) || str[i] > 122)
 			j = 0;
 		else
 			j = 1;
@@ -39,12 +40,11 @@ char	*ft_strcapitalize(char *str)
 	return (str);
 }
 
-int	main()
+int	main(void)
 {
-	char	str[] = "hamdolsun bu gunleride* gorduk Eger ki 23gormemisolsa idik +yinehakkimizde 46-'hayirlisi";
+	char	str[] = "hamdolsun bu-gunleride* gorduk_Eger ki 23gormemisolsa idik +yinehakkimizde 46-'hayirlisi";
 	char	*final;
 
-	final =  ft_strcapitalize(str);
-
+	final = ft_strcapitalize(str);
 	printf("%s\n", final);
 }

@@ -6,7 +6,7 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 01:16:45 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/07/31 17:38:54 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/13 21:08:53 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -17,8 +17,8 @@ void	ft_ultimate_ft(int	*********nbr)
 	*********nbr = 42;
 }
 
-int	main()
-{
+int	main(void)
+{						// type:
 	int	*********p1;	// char
 	int	********p2;		// char *
 	int	*******p3;		// char **
@@ -40,7 +40,6 @@ int	main()
 	p3 = &p4;
 	p2 = &p3;
 	p1 = &p2;
-
 	ft_ultimate_ft(p1);
 	printf("%d\n", x);
 }

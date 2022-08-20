@@ -6,13 +6,14 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 16:57:57 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/01 12:19:44 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/13 16:49:40 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <unistd.h>
 #include <stdio.h>
-void	write_char(char	c)
+
+void	write_char(char c)
 {
 	write(1, &c, 1);
 }
@@ -20,9 +21,9 @@ void	write_char(char	c)
 char	zero_to_nine(char c, char n)
 {
 	if (n == 0)
-		return(c / 10 + 48);
+		return (c / 10 + 48);
 	else
-		return(c % 10 + 48);
+		return (c % 10 + 48);
 }
 
 void	ft_print_comb2(void)
@@ -41,7 +42,7 @@ void	ft_print_comb2(void)
 			write_char(' ');
 			write_char(zero_to_nine(b, 0));
 			write_char(zero_to_nine(b, 1));
-			if (!(a == 98 &&  b == 99))
+			if (!(a == 98 && b == 99))
 				write(1, ", ", 2);
 			b++;
 		}
@@ -49,7 +50,8 @@ void	ft_print_comb2(void)
 	}
 }
 
-int	main()
+int	main(void)
 {
 	ft_print_comb2();
+	write(1, "\n", 1);
 }

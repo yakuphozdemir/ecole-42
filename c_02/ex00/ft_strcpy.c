@@ -6,7 +6,7 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/01 14:03:34 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/01 18:07:37 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/15 16:26:50 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,7 +15,7 @@
 
 char	*ft_strcpy(char *dest, char *src)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	while (src[i] != '\0')
@@ -23,15 +23,15 @@ char	*ft_strcpy(char *dest, char *src)
 		dest[i] = src[i];
 		i++;
 	}
-	return(dest);
+	return (dest);
 }
 
-int	main()
+int	main(void)
 {
 	char	desti[] = "string";
 	char	srci[] = "bizbiz";
 	char	*dest;
 
 	dest = ft_strcpy(desti, srci);
-	printf("%s\n",dest);
+	printf("%s\n", dest);
 }

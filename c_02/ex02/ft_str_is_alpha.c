@@ -6,7 +6,7 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/02 16:57:28 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/03 13:27:21 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/15 16:31:52 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -15,8 +15,7 @@
 int	ft_str_is_alpha(char *str)
 {
 	int	i;
-	int r;
-	
+
 	i = 0;
 	while (str[i] != '\0')
 	{
@@ -27,7 +26,7 @@ int	ft_str_is_alpha(char *str)
 	return (1);
 }
 
-int	main()
+int	main(void)
 {
 	char	word[] = "bizbiz";
 

@@ -1,30 +1,46 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   ft_putstr2.c                                       :+:      :+:    :+:   */
+/*   ft_atoi.c                                          :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2022/07/30 21:01:02 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/07/30 21:11:56 by yozdemir         ###   ########.fr       */
+/*   Created: 2022/08/11 12:52:54 by yozdemir          #+#    #+#             */
+/*   Updated: 2022/08/11 13:34:11 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include <unistd.h>
+#include <stdio.h>
 
-void	ft_putchar(char c)
-{
-	write(1, &c, 1);
-}
-
-void	ft_putstr(char *str)
+int	ft_atoi(char *str)
 {
 	int	i;
+	int	num;
+	int	sign;
 
 	i = 0;
-	while (!(str[i] == '\0'))
+	num = 0;
+	sign = 1;
+	while ((str[i] == ' ') || (str[i] >= 9 && str[i] <= 13))
+			i++;
+	while (str[i] == '-' || str[i] == '+')
 	{
-		ft_putchar(str[i]);
+		if (str[i] == '-')
+			sign *= -1;
 		i++;
 	}
+	while (str[i] >= 48 && str[i] <= 57)
+	{
+		num = (str[i] - 48) + (num * 10);
+		i++;
+	}
+	num = num * sign;
+	return (num);
+}
+
+int	main(void)
+{
+	char	str[] = " ----4852951anc56588";
+
+	printf("%d\n", ft_atoi(str));
 }

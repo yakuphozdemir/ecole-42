@@ -6,7 +6,7 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/30 02:43:25 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/07/31 20:37:13 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/14 15:03:13 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,18 +14,18 @@
 
 void	ft_ultimate_div_mod(int *a, int *b)
 {
-	int	dev;
-	int	mod;
-	if (*b != 0 && a != 0 && b != 0)
+	//int	dev;
+	//int	mod;
+	if (*b != 0 && (a != 0 && b != 0))
 	{
-		dev = *a / *b;
-		mod = *a % *b;
-		*a = dev;
-		*b = mod;
+		//dev = *a / *b;
+		//mod = *a % *b;
+		*a = *a / *b;
+		*b = *a % *b;
 	}
 }
 
-int	main()
+int	main(void)
 {
 	int	i;
 	int	j;

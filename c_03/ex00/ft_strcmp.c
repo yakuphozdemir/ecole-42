@@ -6,11 +6,11 @@
 /*   By: yozdemir <marvin@42.fr>                    +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/04 12:14:55 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/04 13:13:43 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/19 20:50:16 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-int		ft_strcmp(char *s1, char *s2)
+int	ft_strcmp(char *s1, char *s2)
 {
 	int	i;
 	int	result;

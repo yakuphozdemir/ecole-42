@@ -6,7 +6,7 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/07/25 00:36:29 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/07/25 13:42:40 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/13 15:58:57 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -31,5 +31,6 @@ void	ft_is_negative(int n)
 
 int	main(void)
 {
-	ft_is_negative();
+	ft_is_negative(500);
+	write(1, "\n", 1);
 }

@@ -1,7 +1,7 @@
-#include <string.h>
+#include <bsd/string.h>
 #include <stdio.h>
 
-int	main()
+int	main(void)
 {
 	char	dest[] = "sozcukler";
 	char	src[] = "kelime";

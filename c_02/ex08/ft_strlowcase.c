@@ -6,7 +6,7 @@
 /*   By: yozdemir <yozdemir@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2022/08/03 15:57:53 by yozdemir          #+#    #+#             */
-/*   Updated: 2022/08/03 16:02:15 by yozdemir         ###   ########.fr       */
+/*   Updated: 2022/08/15 17:04:46 by yozdemir         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -23,10 +23,10 @@ char	*ft_strlowcase(char *str)
 			str[i] = str[i] + 32;
 		i++;
 	}
-	return str;
+	return (str);
 }
 
-int	main()
+int	main(void)
 {
 	char	str[] = "StrIng";
 
